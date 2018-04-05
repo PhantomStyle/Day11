@@ -15,7 +15,7 @@ public class CompanyDaoJdbc implements CompanyDao {
 
     @Override
     public Company getById(Long id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM Company WHERE id = ?", new CompanyRowMapper());
+        return jdbcTemplate.queryForObject("SELECT * FROM Company WHERE id = id", new CompanyRowMapper());
     }
 
     @Override
